@@ -8,8 +8,15 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest --watchAll",
-    "lint": "expo lint"
+    "jest": "jest --watchAll",
+    "lint": "expo lint",
+    "vitest": "echo Tests not defined yet",
+    "test": "pnpm run typecheck && pnpm run eslint && pnpm run prettier && pnpm run vitest",
+    "typecheck": "tsc --noEmit",
+    "eslint": "eslint .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "eslint:fix": "eslint . --fix"
   },
   "jest": {
     "preset": "jest-expo"
