@@ -1,28 +1,9 @@
-import type { Session, User} from "@rider/models";
-
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import { apiFetch } from "@/lib/apiFetch";
-import { type ApiDefault } from "@rider/models";
-import { s } from "@rider/packages";
-import { useQuery } from "@tanstack/react-query";
 import { Image, Platform, StyleSheet } from "react-native";
 
 export default function HomeScreen() {
-  const { data } = useQuery({
-    queryKey: ["auth"],
-    queryFn: async () => {
-      const res = await apiFetch("/api/auth/v1/validate");
-      const data = s.parse(await res.text()) as ApiDefault<{
-        user: User;
-        session: Session;
-      }>;
-
-      return data;
-    },
-  });
-
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
@@ -33,9 +14,7 @@ export default function HomeScreen() {
         />
       }
     >
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText>{JSON.stringify(data)}</ThemedText>
-      </ThemedView>
+      <ThemedView style={styles.titleContainer}></ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
