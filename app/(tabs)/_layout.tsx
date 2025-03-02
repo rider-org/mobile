@@ -53,6 +53,12 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="auth/google/index"
+        options={{
+          tabBarStyle: { display: "none" },
+        }}
+      />
     </Tabs>
   );
 }

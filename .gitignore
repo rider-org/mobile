@@ -40,3 +40,6 @@ app-example
 .env*
 !.env.example
 !.env.vault
+
+.flaskenv*
+!.env.project
