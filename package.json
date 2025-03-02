@@ -16,7 +16,10 @@
     "eslint": "eslint .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "eslint:fix": "eslint . --fix"
+    "eslint:fix": "eslint . --fix",
+    "env:init": "pnpx dotenv-vault@latest new vlt_d7045802954b70219cf7b69f940e0d3d1a30f23cd09684ae83af7daacb8935aa",
+    "env:pull": "pnpx dotenv-vault@latest pull",
+    "env:push": "pnpx dotenv-vault@latest push"
   },
   "jest": {
     "preset": "jest-expo"
