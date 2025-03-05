@@ -2,8 +2,8 @@ import * as SecureStore from "expo-secure-store";
 
 /**
  * This function overrides the default fetch to specifically make API requests, pretending as if
- * they are actually on the same domain. Behind the scenes, it will automatically patch the server URL
- * in, as well as the session_token.
+ * they are actually on the same domain. Behind the scenes, it will automatically patch
+ * the server URL in, as well as the session_token.
  */
 export const apiFetch = async (
   input: string | URL | globalThis.Request,
@@ -15,7 +15,7 @@ export const apiFetch = async (
 
   const baseUrl = process.env.EXPO_PUBLIC_SERVER_URL;
 
-  const fullCookieString = SecureStore.getItemAsync("session_token");
+  const fullCookieString = await SecureStore.getItemAsync("session_token");
 
   return fetch(baseUrl + input, {
     ...init,

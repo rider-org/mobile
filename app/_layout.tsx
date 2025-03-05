@@ -34,6 +34,13 @@ export default function RootLayout() {
       <ThemeProvider value={DarkTheme}>
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen
+            name="(auth)/login/index"
+            options={{
+              title: "Login to Rider",
+              headerBackTitle: "Go back",
+            }}
+          />
           <Stack.Screen name="+not-found" />
         </Stack>
         <StatusBar style="auto" />

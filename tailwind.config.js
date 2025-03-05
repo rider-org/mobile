@@ -8,6 +8,7 @@ module.exports = {
         primary: "#01081E",
         secondary: "#121B2B",
         tertiary: "#222A48",
+        loader: "#313B58",
       },
     },
   },

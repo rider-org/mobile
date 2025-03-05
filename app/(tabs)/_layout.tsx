@@ -45,18 +45,12 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="auth/index"
+        name="account/index"
         options={{
           title: "Account",
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="person.circle.fill" color={color} />
           ),
-        }}
-      />
-      <Tabs.Screen
-        name="auth/google/index"
-        options={{
-          tabBarStyle: { display: "none" },
         }}
       />
     </Tabs>

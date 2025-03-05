@@ -1,9 +1,9 @@
 import { Text, View } from "react-native";
 
-export default function GoogleAuth() {
+export default function LoginPage() {
   return (
     <View>
-      <Text className="text-white">hi</Text>
+      <Text>hi</Text>
     </View>
   );
 }
